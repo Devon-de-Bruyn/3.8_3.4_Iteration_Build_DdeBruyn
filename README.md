@@ -1,1 +1,1 @@
-Added content to the home page. Made a larger logo for the home page. Styled the home page.
+Made adjustments to the song page. Added JS for the accordian text and hide/show button. Styled the page.
