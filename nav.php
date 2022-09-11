@@ -10,8 +10,8 @@
 	<a href="songs.php" class="songsnav">Songs</a>
 	<?php } ?>
 	<!-- About us & support button -->
-	<a href="" class="aboutnav">About Us</a>
-	<a href="" class="supportnav">Support</a>
+	<a href="about.php" class="aboutnav">About Us</a>
+	<a href="support.php" class="supportnav">Support</a>
 	<!-- If there is no user -->
 	<?php if(!isset($_SESSION['User_ID'])){ ?>
 	<a href="login.php" class="trial">Start Free Trial</a>
