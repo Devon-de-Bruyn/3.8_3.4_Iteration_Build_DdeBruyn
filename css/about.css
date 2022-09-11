@@ -1,0 +1,62 @@
+@font-face {
+  font-family: abel;
+  src: url(Abel-Regular.ttf)
+}
+
+.aboutnav{ 
+	color:#ffb1e4;
+	cursor: default;
+	border-bottom: solid 2px #ffb1e4;
+	padding: 3px;
+	padding-bottom: 1px;
+	margin-bottom: 10px;
+}
+
+.about {
+	height: auto;
+	width: 90%;
+	overflow: hidden;
+	overflow-x: hidden;
+	margin: 0px auto;
+	margin-top: 10px;
+	display: flex;
+	min-height: 70vh;
+
+}
+
+.text{ 
+	width:60%;
+	height:auto;
+	min-height: 65vh;
+	background-color: white;
+	border-radius: 20px;
+	padding: 0px 20px;
+}
+
+.img{ 
+	width:40%;
+	min-height: 65vh;
+	max-height: 70vh;
+	height: auto;
+	margin-left:2%;
+	border-radius: 20px;
+	border: solid 2px #ffb1e4;
+}
+
+.about img{
+	width: 100%;
+	object-fit:cover;
+	object-position: 15% 15%;
+	border-radius: 18px;
+}
+
+p{
+	font-family: abel;
+	color:#e6124e;
+	font-size:19px;
+}
+
+.text span{
+	font-size:22px;
+	font-weight: bold;
+}
