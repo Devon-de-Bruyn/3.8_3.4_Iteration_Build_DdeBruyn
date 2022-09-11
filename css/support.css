@@ -1,3 +1,4 @@
+/*** Layout ***/
 .supportnav{
 	color:#ffb1e4;
 	cursor: default;
@@ -55,6 +56,11 @@
 	border-bottom: 2px solid white;
 	font-family: abel;
 	color: #d14785;
+	animation-name: input;
+  	animation-duration: 0.3s;
+	animation-direction: forwards
+	animation-timing-function: ease-in-out;
+	animation-fill-mode: both;
 }
 
 .support input[type=text]::placeholder,textarea::placeholder{ 
@@ -72,6 +78,7 @@
   	cursor: pointer;
 	border-radius: 20px;
 	margin-bottom: -20px;
+	transition: all 0.3s ease;
 	margin-top: 10px;
 	margin-bottom: 30px;
 }
@@ -91,6 +98,7 @@ textarea{
 	border: 2px solid #e6124e;
   	border-radius: 15px;
 	width: 100%;
+	transition: all 0.3s ease;
 }
 
 textarea:focus{

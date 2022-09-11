@@ -1,9 +1,11 @@
+/*** Fonts ***/
 @font-face {
   font-family: abel;
   src: url(Abel-Regular.ttf)
 }
 
-.aboutnav{ 
+/*** Layout ***/
+.aboutnav{ /* Changes the nave to look active*/
 	color:#ffb1e4;
 	cursor: default;
 	border-bottom: solid 2px #ffb1e4;
@@ -24,7 +26,7 @@
 
 }
 
-.text{ 
+.text{ /* Makes the white background*/
 	width:60%;
 	height:auto;
 	min-height: 65vh;
@@ -33,7 +35,7 @@
 	padding: 0px 20px;
 }
 
-.img{ 
+.img{ /*Outline the image*/
 	width:40%;
 	min-height: 65vh;
 	max-height: 70vh;
@@ -60,3 +62,43 @@ p{
 	font-size:22px;
 	font-weight: bold;
 }
+
+/*** Responsive ***/
+
+@media (max-width: 855px) {/* When the website is 855px wide or less*/
+	content{
+		height: auto;
+	}
+	.about { /*Moves the content into one column*/
+		display: flex;  
+    	flex-direction: column;
+		width: 75%;
+		height: auto;
+		padding: 0px;
+  	}
+	.text{
+		height: auto;
+		margin-bottom: 20px;
+		font-size: 18px;
+		width: 80%;
+	}
+	.text,.img{
+		margin-right:0px;
+		margin-left:0px;
+	}
+	.img{
+		width: 90%;min-height:0px;
+		
+		padding-right: 0px;
+		padding: 0px;
+	}
+	.about img{
+		width: 100%;
+		object-fit: cover;
+		object-position: 15% 15%;
+		border-radius: 18px;
+		padding: 0px;
+		margin-bottom: 0px;
+	}
+}
+

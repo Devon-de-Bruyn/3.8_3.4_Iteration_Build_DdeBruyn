@@ -1,3 +1,4 @@
+/*** Fonts ***/
 @font-face {
   font-family: abel;
   src: url(Abel-Regular.ttf)
@@ -8,6 +9,27 @@
   src: url(Alatsi-Regular.ttf)
 }
 
+/*** Animations ***/
+@keyframes input{
+  from {border-bottom: 2px solid white;}
+  to {border-bottom: 2px solid #e6124e;}
+}
+
+@keyframes submit{
+  from {background-color: white;
+border: 1px solid white;}
+  to {background-color: #ffdee7;
+	border: 1px solid #e6124e;}
+}
+
+@keyframes google{
+  from {background-color: transparent;
+border: 2px solid white;}
+  to {background-color: hsla(340, 60%, 98%, 0.2);
+	border: 2px solid #ffb1e4;}
+}
+
+/*** Layout ***/
 .login {
 	margin: auto;
 	background-image: url(../images/Box.png);
@@ -48,6 +70,11 @@
 	border-bottom: 2px solid white;
 	font-family: abel;
 	color: #ffdef0;
+	animation-name: input; /*Animation*/
+  	animation-duration: 0.3s;
+	animation-direction: forwards
+	animation-timing-function: ease-in-out;
+	animation-fill-mode: both;
 }
 
 .login input[type=text]::placeholder,input[type=password]::placeholder { 
@@ -55,7 +82,7 @@
   	color: #ffbfe2;
 }
 
-.login input[type=submit]{ 
+.login input[type=submit]{ /*Transition adds hover animation*/
   	background-color: white;
   	border: 1px solid white;
   	color: #e6124e;
@@ -66,6 +93,7 @@
   	cursor: pointer;
 	border-radius: 20px;
 	margin-bottom: -20px;
+	transition: all 0.3s ease;
 	margin-top: 20px;
 }
 
@@ -114,6 +142,7 @@ span:after {
 	padding: 4px 8px;
 	border-radius: 3px;
 	width: 280px;
+	transition: all 0.3s ease;
 }
 
 .google img{

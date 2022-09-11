@@ -42,6 +42,7 @@ session_start();
 <html lang="en">
 	<head>
 		<meta charset = "utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=0.73"> <!-- Adds responsive -->
 		<title>Moosic | Login</title>
 		<link rel="icon" type="image/png" href="images/Moosic2.png">
 		<link rel="stylesheet" type="text/css" href="css/style.css">

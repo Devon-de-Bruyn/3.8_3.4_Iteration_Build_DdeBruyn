@@ -1,3 +1,4 @@
+/*** Fonts ***/
 @font-face {
   font-family: abel;
   src: url(Abel-Regular.ttf)
@@ -8,6 +9,20 @@
   src: url(Alatsi-Regular.ttf)
 }
 
+/*** Animations ***/
+@keyframes input{
+  from {border-bottom: 2px solid white;}
+  to {border-bottom: 2px solid #e6124e;}
+}
+
+@keyframes submit{
+  from {background-color: white;
+border: 1px solid white;}
+  to {background-color: #ffdee7;
+	border: 1px solid #e6124e;}
+}
+
+/*** Layout ***/
 .register {
 	margin: auto;
 	background-image: url(../images/Box.png);
@@ -50,6 +65,11 @@
 	border-bottom: 2px solid white;
 	font-family: abel;
 	color: #ffdef0;
+	animation-name: input;
+  	animation-duration: 0.3s;
+	animation-direction: forwards
+	animation-timing-function: ease-in-out;
+	animation-fill-mode: both;
 }
 
 .register input[type=text]::placeholder,input[type=password]::placeholder { 
@@ -69,6 +89,7 @@
 	border-radius: 20px;
 	margin-bottom: 45px;
 	margin-top: -750px;
+	transition: all 0.3s ease;
 }
 
 .register input[type=submit]:hover{
