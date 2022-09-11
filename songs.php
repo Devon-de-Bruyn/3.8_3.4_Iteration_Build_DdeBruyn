@@ -1,11 +1,8 @@
 <?php 
-		session_start();
-        if(!isset($_SESSION['login_user'])){
-                header("index.php");
-				}
-		else{
-			$User = $_SESSION['login_user'];
-        }
+	session_start();
+		include("connection.php");
+		include("functions.php");
+		$user_data = check_login($conn);
 ?>
 
 <!DOCTYPE html>
@@ -19,11 +16,10 @@
 	<body>
 		<main>
 			<nav>
-				<img src="" alt="logo">
-				<a href="">Home</a>
-				<a href="">About Us</a>
-				<a href="">Support</a>
-				<a href="">Start Free Trial</a>
+				<?php	
+				//Pulls the links from the nav.php page and places them in the navigation div
+				require 'nav.php'; 
+				?>
 			</nav>
 			<header>
 				<h1><center>Songs</center></h1>
@@ -35,7 +31,6 @@
 					<button id="genre">Genre A-Z</button>
 					<button id="title">Title Z-A</button>
 					<p>Total Duration: 6hrs 23mins</p>
-					</div>
 					<headings>
 						<Heading><h4>Title</h4></Heading>
 						<Heading><h4>Album</h4></Heading>
@@ -105,10 +100,10 @@
 						?>
 					</div>
 				</div>
-				<footer><!-- Holds the foot notes -->
-					<p class = "footer">Copyright © 2021 Devon de Bruyn, Tawa College. All rights reserved.</p>
-				</footer>
 			</content>
 		</main>	
+		<footer><!-- Holds the foot notes -->
+			<p class = "footer">Copyright © 2021 Devon de Bruyn, Tawa College. All rights reserved.</p>
+		</footer>
 	</body>
 </html>

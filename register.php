@@ -1,3 +1,45 @@
+<?php 
+session_start();
+	// Connects the database to the website
+	include("connection.php");
+	// Enables the functions from functions.php
+	include("functions.php");
+	
+	// Checks if someone is trying to register
+	if($_SERVER['REQUEST_METHOD'] == "POST")
+	{	// Sets the variables from the form
+		$Username = $_POST['username'];
+		$Password = $_POST['password'];
+		
+		// Checks if the username or password was empty
+		if(!empty($Username) && !empty($Password) && !is_numeric($Username))
+		{	// Checking if username and password was taken
+			$query = "SELECT * FROM Users WHERE Username = '$Username' AND Password = '$Password'";
+			$result = mysqli_query($conn, $query);
+			// Checks if there was a result
+			if($result && mysqli_num_rows($result) > 0)
+			{
+				echo "Username taken";
+			}
+			
+			else{
+				// Saves the user to database
+				$query = "INSERT INTO Users(Username, Password) VALUES('$Username','$Password')";
+				mysqli_query($conn, $query);
+				// Returns the user to the login page
+				header("Location: login.php");
+				die;
+			}
+		
+		}else //  If the username or password were blank
+		{
+			echo "Please enter your username and password";
+		}
+	}
+	
+?>
+
+
 <!DOCTYPE html>
 <html lang = "en">
 	<head>
@@ -9,11 +51,10 @@
 	<body>
 		<main>
 			<nav>
-				<img src="" alt="logo">
-				<a href="">Home</a>
-				<a href="">About Us</a>
-				<a href="">Support</a>
-				<a href="">Start Free Trial</a>
+				<?php	
+				//Pulls the links from the nav.php page and places them in the navigation div
+				require 'nav.php'; 
+				?>
 			</nav>
 			<header>
 				<h1><center>REGISTER</center></h1>
@@ -31,34 +72,12 @@
 						<input type = "text" placeholder = "Enter user email"/></h4><br>
 						<center><h4><input type="submit" value="Sign Up"/></h4></center><br>
 					</form>
-					
-					<?php
-							//connect.php (tells where to connect servername, username, password, dbaseName)
-							require "91902_mysqli.php";
-							print "<p class = 'grey'>Connected to server</p>";
-						
-							$UserID = isset($_POST['username']) ? $_POST['username']: "";
-							$PW = isset($_POST['password']) ? $_POST['password']: "";
-
-							//create a variable to store sql code for the 'Add Users' query
-							$insertquery = "INSERT INTO Users( Username, Password ) VALUES('$UserID','$PW')";
-
-							if (mysqli_query($conn,$insertquery))
-								{
-								echo "<p class = 'grey'>Record inserted:</p>";
-								}
-							else
-								{
-								echo "<p class = 'grey'>Error inserting record:</p>";
-								}
-						?>
-					
 					<div class="back"><center><a href="login.php"> ← Back </a><br></center></div>
 				</div>
-				<footer><!-- Holds the foot notes -->
-					<p class = "footer">Copyright © 2021 Devon de Bruyn, Tawa College. All rights reserved.</p>
-				</footer>
 			</content>
 		</main>
+		<footer><!-- Holds the foot notes -->
+			<p class = "footer">Copyright © 2021 Devon de Bruyn, Tawa College. All rights reserved.</p>
+		</footer>
 	</body>
 </html>
