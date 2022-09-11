@@ -10,8 +10,10 @@
 	<head>
 		<meta charset = "utf-8" />
 		<title>Moosic | Songs</title>
+		<link rel="icon" type="image/png" href="images/Moosic2.png">
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 		<link rel="stylesheet" type="text/css" href="css/songs.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 	</head>
 	<body>
 		<main>
@@ -27,10 +29,23 @@
 			<content>
 				
 				<div class="songs">
-					<p>Order By:</p>
-					<button id="genre">Genre A-Z</button>
-					<button id="title">Title Z-A</button>
-					<p>Total Duration: 6hrs 23mins</p>
+					<div class="top">
+					<p class="ob">Order By:</p>
+					
+					<div class="tfilter">
+					<button class="accordion">Title Z-A</button>
+					<div class="panel">
+						<button id="genre">Genre A-Z</button>
+					</div></div>
+					
+					<div class="gfilter">
+					<button class="accordion">Genre A-Z</button>
+					<div class="panel">
+						<button id="title">Title Z-A</button>
+					</div></div>
+					
+					<p class="total">Total Duration: 6hrs 23mins</p>
+					</div>
 					<headings>
 						<Heading><h4>Title</h4></Heading>
 						<Heading><h4>Album</h4></Heading>
@@ -100,10 +115,13 @@
 						?>
 					</div>
 				</div>
+				
 			</content>
 		</main>	
 		<footer><!-- Holds the foot notes -->
 			<p class = "footer">Copyright © 2021 Devon de Bruyn, Tawa College. All rights reserved.</p>
 		</footer>
+		<script src="js/accordion.js"></script>
+		<script src="js/filter.js"></script>
 	</body>
 </html>
