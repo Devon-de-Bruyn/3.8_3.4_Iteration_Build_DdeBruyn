@@ -1,0 +1,147 @@
+@font-face {
+  font-family: abel;
+  src: url(Abel-Regular.ttf)
+}
+
+@font-face {
+  font-family: alatsi;
+  src: url(Alatsi-Regular.ttf)
+}
+
+.login {
+	margin: auto;
+	background-image: url(../images/Box.png);
+	background-repeat: no-repeat;
+	z-index:2;
+	max-width: 354px;
+	width: 90%;
+	height: 480px;
+	font-family: abel;
+	padding: 22px;
+}
+
+.login label{
+	font-size: 18px;
+	color: white;
+	font-weight: normal;
+	margin-left: 1px;
+}
+
+.login input[type=text],input[type=password]{
+	box-sizing: border-box;
+	font-size: 24px;
+	font-family: abel;
+	color: #ffdef0;
+	font-weight: normal;
+	background: none;
+	border: none;
+  	border-bottom: 2px solid white;
+	width: 99%;
+	margin-bottom: 25px;
+	margin-top: -5px;
+	opacity: 1;
+}
+
+.login input[type=text]:focus,input[type=password]:focus{
+  	opacity: 0.5;
+	border: none;
+	border-bottom: 2px solid white;
+	font-family: abel;
+	color: #ffdef0;
+}
+
+.login input[type=text]::placeholder,input[type=password]::placeholder { 
+	opacity: 0.5;
+  	color: #ffbfe2;
+}
+
+.login input[type=submit]{ 
+  	background-color: white;
+  	border: 1px solid white;
+  	color: #e6124e;
+	font-family: alatsi;
+	font-size: 21px;
+  	padding: 5px 52px;
+  	text-decoration: none;
+  	cursor: pointer;
+	border-radius: 20px;
+	margin-bottom: -20px;
+	margin-top: 20px;
+}
+
+.login input[type=submit]:hover{
+	background-color: #ffdee7;
+	border: 1px solid #e6124e;
+}
+
+span {
+    position: relative;
+    display: inline-block;
+	font-size: 18px;
+	color: white;
+}
+
+span:before, span:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 40px;
+    height: 1px;
+    background: white;
+}
+
+span:before {
+    right: 100%;
+    margin-right: 20px;
+}
+
+span:after {
+    left: 100%;
+    margin-left: 20px;
+}
+
+.google{
+	margin-top: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 2px solid white;
+	font-family: alatsi;
+	font-size: 21px;
+	color: white;
+	cursor: pointer;
+	background-color: transparent;
+	padding: 4px 8px;
+	border-radius: 3px;
+	width: 280px;
+}
+
+.google img{
+	margin-right: 15px;
+}
+
+.google:hover{
+	background-color: hsla(340, 60%, 98%, 0.2);
+	border: 2px solid #ffb1e4;
+}
+	
+.new {
+	margin-top: 55px;
+	font-size: 18px;
+	color: white;
+}
+
+.new a{
+	color: #fa376f;
+	margin-left: 15px;
+	font-weight: 100;
+}
+
+.error{
+	color: white;
+	margin: 0px;
+	margin-top: -10px;
+	font-size: 15px;
+	padding: 0px;
+	font-weight: 100;
+}

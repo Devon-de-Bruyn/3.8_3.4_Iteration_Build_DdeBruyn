@@ -1,5 +1,5 @@
 <!-- Moosic logo & home button -->
-	<a href="songs.php" class="logo"><img src="images/Moosic-logo.png" alt="logo" height=50px></a>
+	<a href="songs.php" class="logo"><img src="images/Moosic-logo-2.png" alt="logo" height=50px></a>
 	<a href="songs.php" class="home">Moosic</a>
 	<!-- If the user is an admin -->
 	<?php if(isset($_SESSION['User_ID'])){ if($user_data['Admin'] == 'Yes'){ ?>
