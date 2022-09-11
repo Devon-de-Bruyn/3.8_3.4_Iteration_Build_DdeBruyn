@@ -45,6 +45,7 @@ session_start();
 	<head>
 		<meta charset = "utf-8" />
 		<title>Moosic | Register</title>
+		<link rel="icon" type="image/png" href="images/Moosic2.png">
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 		<link rel="stylesheet" type="text/css" href="css/register.css">
 	</head>
