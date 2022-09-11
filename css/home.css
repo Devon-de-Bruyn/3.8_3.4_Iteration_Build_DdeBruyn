@@ -1,8 +1,16 @@
+/*** Fonts ***/
 @font-face {
   font-family: alatsi;
   src: url(Alatsi-Regular.ttf)
 }
 
+/*** Animations ***/
+@keyframes hover{
+  from {background-color: hsla(350, 100%, 75%, 0.1); border: 2px solid hsla(0, 0%, 100%, 0.4);}
+  to {background-color: hsla(350, 100%, 75%, 0.3); border: 2px solid white;}
+}
+
+/*** Layout ***/
 content{
 	margin-bottom: 50px;
 }
@@ -28,7 +36,7 @@ content .title{
 	margin-top: -10px;
 }
 
-.enter{ 
+.enter{ /* Transition adds hover animation */
 	margin-top: 125px;
 	background-color: hsla(350, 100%, 75%, 0.1);
   	border: 2px solid hsla(0, 0%, 100%, 0.4);
@@ -40,6 +48,7 @@ content .title{
 	font-size: 36px;
 	text-decoration: none;
 	margin-bottom: 50px;
+	transition: all 0.3s ease;
 }
 
 .enter:hover{

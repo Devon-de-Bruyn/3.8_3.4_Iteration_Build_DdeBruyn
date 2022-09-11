@@ -1,8 +1,10 @@
+/*** Fonts ***/
 @font-face {
   font-family: abel;
   src: url(Abel-Regular.ttf)
 }
 
+/*** Layout ***/
 .songsnav{
 	color:#ffb1e4;
 	cursor: default;
@@ -164,6 +166,7 @@ row{
   	outline: none;
   	font-size: 21px;
 	background: none;
+	transition: 0.3s;
 	z-index: 2;
 }
 
