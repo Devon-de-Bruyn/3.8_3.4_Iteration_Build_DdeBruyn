@@ -1,0 +1,124 @@
+@font-face {
+  font-family: alatsi;
+  src: url(Alatsi-Regular.ttf)
+}
+
+@font-face {
+  font-family: abel;
+  src: url(Abel-Regular.ttf)
+}
+
+@font-face {
+  font-family: amiko;
+  src: url(Amiko-Regular.ttf)
+}
+
+html{
+	overflow: scroll;
+	overflow-x: hidden;	
+	padding:0px;
+	margin:0px;
+	width:100vw;
+}
+
+body{
+	padding:0px;
+	margin:0px;
+}
+
+/* Hides the scroll bar*/
+html::-webkit-scrollbar {
+	width: 0px;		
+}
+
+
+main{ /* Creates background using gradient and repeating pattern*/
+	background-image: url(../images/Swirls.png), linear-gradient(#dc4050, #5b0763);
+	background-repeat: repeat, no-repeat;
+	position: relative;
+	margin:0px;
+	padding: 15px 4% 30px 4%;
+	min-height: calc(100vh - 80px);
+	width: 92vw;
+	min-width: 480px;
+	
+}
+
+header{
+	margin-top: 20px;
+}
+
+
+content{
+	z-index: 2;	
+	overflow:scroll;	
+	overflow-x:scroll;
+	margin-top: 20px;
+	margin-bottom: 5px;
+}
+
+
+nav {
+	margin-top: 15px;
+	font-family: alatsi;
+	font-size: 18px;
+	display: flex; 
+	align-items: center;
+}
+
+
+nav a { 
+	color: white;
+  	text-align: center;
+  	margin: 6px 16px;
+	padding: 3px 8px;
+  	text-decoration: none;
+}
+
+nav .trial, .logout{ 
+	display: box;
+	color: #e6124e;
+	background-color: white;
+	padding: 6px 16px;
+	border-radius: 20px;
+	border: 1px solid white;
+}
+
+nav .home{ 
+	margin-left:-18px;
+}
+
+nav a:hover {
+  	color: #ffb1e4;
+}
+
+nav .trial:hover, .logout:hover{
+	background-color: #ffdee7;
+	border: 1px solid #e6124e;
+	color: #e6124e;
+}
+
+h1{
+	font-family: alatsi;
+	font-size: 72px;
+	color: #ffb1e4;
+	margin: 0;
+}
+
+
+footer{
+	align-self: flex-end;
+	display:flex;
+	align-items: center;
+	justify-content: center;
+	height: 60px;
+  	width: 80%;
+	font-family: amiko;
+  	color: #e6124e;
+  	text-align: center;
+	background-color: #fff;
+	font-size: 18px;
+	padding-left: 10%;
+	padding-right: 10%;
+	margin-top: 5px;
+}
